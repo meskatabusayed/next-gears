@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import "./globals.css";
+import Providers from "@/lib/Providers";
 
 export const metadata: Metadata = {
   title: "Next Gears",
@@ -17,7 +18,9 @@ export default function RootLayout({
       <body
         className={`antialiased`}
       >
+        <Providers>
         {children}
+        </Providers>
       </body>
     </html>
   );
